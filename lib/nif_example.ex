@@ -1,18 +1,7 @@
 defmodule NifExample do
-  @moduledoc """
-  Documentation for NifExample.
-  """
+  @on_load :load_nifs
 
-  @doc """
-  Hello world.
+  def load_nifs, do: :erlang.load_nif('./priv/nif_example', 0)
 
-  ## Examples
-
-      iex> NifExample.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  def hello_world, do: :erlang.nif_error("NIF hello_world/0 not implemented")
 end
