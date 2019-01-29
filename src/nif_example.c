@@ -1,6 +1,6 @@
 #include "erl_nif.h"
 
-// a simple funciton that returns an atom
+// a simple function that returns an atom
 static ERL_NIF_TERM
 hello_world(ErlNifEnv *env, int argc, const ERL_NIF_TERM argv[])
 {
